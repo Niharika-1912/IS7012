@@ -1,0 +1,72 @@
+﻿@page
+@model CoreCrud.Pages.Watches.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].BrandName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].ManufacturingDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].StrapMaterial)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].HighWaterResistance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].PriceUSD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WristWatch[0].Manufacturer)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.WristWatch) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BrandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ManufacturingDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StrapMaterial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HighWaterResistance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceUSD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Manufacturer.ID)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
