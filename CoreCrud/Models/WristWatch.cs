@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -18,5 +19,22 @@ namespace CoreCrud.Models
         public int ManufacturerID { get; set; }
         public Manufacturer Manufacturer { get; set; }
 
+        [NotMapped]
+        public string DeepDiveCompatible
+        {
+            get
+            {
+
+                if (HighWaterResistance == true)
+                {
+                    return "Yes";
+                }
+                else
+                {
+                    return "No";
+                }
+
+            }
+        }
     }
 }

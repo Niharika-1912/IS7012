@@ -1,9 +1,17 @@
 ﻿@page
 @model ManufacturerProfileModel
 @{
-   
+
 }
 
+
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
 <h1>ManufacturerProfile</h1>
 <h2 class="text-center text-success">@Model.Manufacturer.Name</h2>
 <div class="row">
@@ -18,16 +26,34 @@
 
     </div>
     <div class="col-md-6">
-        <h3>Collection</h3>>
-        <ul>
-            @foreach (var wristWatch in Model.Manufacturer.Watches)
-            {
-                <li>
-                    Name=@wristWatch.Name
-                    Price=@wristWatch.PriceUSD
-                </li>
-            }
-        </ul>
+        <h3>Collection</h3>
+
+
+        @foreach (var wristWatch in Model.Manufacturer.Watches)
+        {
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Deep Dive Compatible</th>
+                </tr>
+                <tr>
+                    <td>@wristWatch.Name</td>
+                    <td>@wristWatch.PriceUSD</td>
+                    <td>@wristWatch.DeepDiveCompatible</td>
+                </tr>
+
+
+            </table>
+
+
+
+
+
+
+
+        }
+
     </div>
 </div>
 
