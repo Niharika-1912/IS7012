@@ -19,10 +19,25 @@ namespace CoreCrud.Pages
         }
 
         public Manufacturer Manufacturer { get; set; }
-        public void OnGet(int? id)
+        public IActionResult OnGet(int? id)
+
         {
 
-            Manufacturer = _context.Manufacturer.Include(i=>i.Watches).FirstOrDefault(i=>i.ID==id);
+           if (id == null)
+                {
+                    return NotFound();
+                }
+
+
+                Manufacturer = _context.Manufacturer.Include(i=>i.Watches).FirstOrDefault(i=>i.ID==id);
+
+            if (Manufacturer == null)
+            {
+                return NotFound();
+            }
+
+
+            return Page();
 
         }
     }
