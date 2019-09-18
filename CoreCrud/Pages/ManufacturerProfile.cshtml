@@ -36,11 +36,22 @@
                     <th>Name</th>
                     <th>Price</th>
                     <th>Deep Dive Compatible</th>
+                    <th>Life time Warranty</th>
                 </tr>
                 <tr>
                     <td>@wristWatch.Name</td>
                     <td>@wristWatch.PriceUSD</td>
                     <td>@wristWatch.DeepDiveCompatible</td>
+                    <td>
+                        @if (wristWatch.PriceUSD <10000)
+                        {
+                            <text>No</text>
+                        }
+                        else
+                        {
+                            <text>Yes</text>
+                        }
+                    </td>
                 </tr>
 
 

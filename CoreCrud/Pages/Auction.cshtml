@@ -1,0 +1,48 @@
+﻿@page
+@model CoreCrud.Pages.AuctionModel
+@{
+    ViewData["Title"] = "Auction";
+}
+
+
+<h1>Auction List</h1>
+<p>Find some of the best collections from these high-end manufacturers</p>
+
+
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Maufacturer Name</th>
+            <th>Model name</th>
+            <th>Price (USD)</th>
+            <th>Strap</th>
+            <th>High Water Resistance</th>
+            <th>ManufacturingDate</th>
+            <th>Premium</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Name in Model.Watches)
+        {
+        <tr>
+            <td>@Name.BrandName</td>
+            <td>@Name.Name</td>
+            <td>@Name.PriceUSD</td>
+            <td>@Name.StrapMaterial</td>
+            <td>@Name.HighWaterResistance</td>
+            <td>@Name.ManufacturingDate</td>
+            <td>
+                @if (Name.PriceUSD>=10000)
+                {
+                   <text>Yes</text>
+                }
+                else
+                {
+                   <text>No</text>
+                }
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

@@ -54,9 +54,47 @@
             <p>Have a look at what some of the premium manufacturers have to offer</p>
             <a href="http://localhost:64555/Manufacturerprofile?id=1">Rolex</a><br />
             <a href="http://localhost:64555/Manufacturerprofile?id=3">Breguet</a><br />
-            <a href="http://localhost:64555/Manufacturerprofile?id=2">Blancpain</a><br />
-                
-            
+            <a href="http://localhost:64555/Manufacturerprofile?id=2">Blancpain</a><br /><br /><hr />
+
+            <h2>Auction</h2>
+            <hr />
+            <p>Here is a link to our Auction Page</p>
+            <a href="http://localhost:64555/Auction">Auction List</a><br /><br /><hr />
+
+
+
+            <h1>Dashboard</h1>
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Statistics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Deep Dive Compatible Watches</td>
+                                <td class="text-right">@Model.CountOfDeepDiveCompatibleWatches</td>
+                            </tr>
+                            <tr>
+                                <td>Rolex Watches</td>
+                                <td class="text-right">@Model.CountOfRolexWatches</td>
+                            </tr>
+                            <tr>
+                                <td>Leather Watches</td>
+                                <td class="text-right">@Model.CountOfLeatherWatches</td>
+                            </tr>
+                            <tr>
+                                <td> Stainless Steel Watches</td>
+                                <td class="text-right">@Model.CountOfStainlessSteelWatches</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
 
         </body>
     </html>
