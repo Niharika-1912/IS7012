@@ -16,6 +16,13 @@ namespace CoreCrud.Models
         [Display(Name = "Country of Origin")]
         public string CountryofOrigin { get; set; }
 
+
+        
+        [RegularExpression(@"^[\d]{3}$")]
+
+        [Display(Name = " 3 digit Country Code")]
+        public int CountryCode { get; set; }
+
         public ICollection<WristWatch> Watches { get; set; }
 
     }

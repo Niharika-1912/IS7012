@@ -1,11 +1,11 @@
 ﻿@page
-@model CoreCrud.Pages.Watches.EditModel
+@model CoreCrud.Pages.Watches.CreateModel
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Create";
 }
 
-<h1>Edit</h1>
+<h1>Create</h1>
 
 <h4>WristWatch</h4>
 <hr />
@@ -13,17 +13,12 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="WristWatch.Id" />
             <div class="form-group">
                 <label asp-for="WristWatch.Name" class="control-label"></label>
                 <input asp-for="WristWatch.Name" class="form-control" />
                 <span asp-validation-for="WristWatch.Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="WristWatch.BrandName" class="control-label"></label>
-                <input asp-for="WristWatch.BrandName" class="form-control" />
-                <span asp-validation-for="WristWatch.BrandName" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <label asp-for="WristWatch.ManufacturingDate" class="control-label"></label>
                 <input asp-for="WristWatch.ManufacturingDate" class="form-control" />
@@ -36,7 +31,7 @@
             </div>
             <div class="form-group form-check">
                 <label class="form-check-label">
-                    <input class="form-check-input" asp-for="WristWatch.HighWaterResistance" /> @Html.DisplayNameFor(model => model.WristWatch.HighWaterResistance)
+                    <input class="form-check-input" asp-for="WristWatch.HighWaterResistance" /> @Html.DisplayNameFor(model => model.WristWatch.HighWaterResistance))
                 </label>
             </div>
             <div class="form-group">
@@ -46,18 +41,17 @@
             </div>
             <div class="form-group">
                 <label asp-for="WristWatch.ManufacturerID" class="control-label"></label>
-                <select asp-for="WristWatch.ManufacturerID" class="form-control" asp-items="ViewBag.ManufacturerID"></select>
-                <span asp-validation-for="WristWatch.ManufacturerID" class="text-danger"></span>
+                <select asp-for="WristWatch.ManufacturerID" class ="form-control" asp-items="ViewBag.ManufacturerID"></select>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="Index">Back to List</a>
 </div>
 
 @section Scripts {

@@ -24,8 +24,8 @@ namespace CoreCrud.Pages
                                                     .Where(x => x.HighWaterResistance == true)
                                                     .Count();
 
-            CountOfRolexWatches = _context.WristWatch
-                                    .Where(x => x.BrandName == "Rolex")
+            CountOfRolexWatches = _context.Manufacturer
+                                    .Where(x => x.Name == "Rolex")
                                     .Count();
 
             CountOfLeatherWatches = _context.WristWatch

@@ -15,12 +15,7 @@ namespace CoreCrud.Models
        
         public string Name { get; set; }
 
-        [StringLength(500)]
-        [Display(Name = "Brand Name")]
-        public string BrandName { get; set; }
-
-
-        public static ValidationResult ManufacturingDateInThePast(DateTime? ManufacturingDate, ValidationContext context)
+         public static ValidationResult ManufacturingDateInThePast(DateTime? ManufacturingDate, ValidationContext context)
         {
             if (ManufacturingDate == null)
             {
