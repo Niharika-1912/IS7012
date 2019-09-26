@@ -18,7 +18,7 @@ namespace CoreCrud.Models
 
 
         
-        [RegularExpression(@"^[\d]{3}$")]
+        [RegularExpression(@"^[\d]{3}$", ErrorMessage = "Must be valid Country Code")]
 
         [Display(Name = " 3 digit Country Code")]
         public int CountryCode { get; set; }
