@@ -4,51 +4,53 @@
 @{
     ViewData["Title"] = "Details";
 }
+<body background="https://s3.amazonaws.com/Syntaxxx/background-gold-bokeh.jpg">
+    <h1>Watches Info</h1>
+    <p>Below is a list of details of the wrist watch</p>
 
-<h1>Watches Info</h1>
-
-<div>
-    <h4>WristWatch</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.Name)
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.ManufacturingDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.ManufacturingDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.StrapMaterial)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.StrapMaterial)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.HighWaterResistance)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.HighWaterResistance)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.PriceUSD)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.PriceUSD)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.WristWatch.Manufacturer)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.WristWatch.Manufacturer.Name)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.WristWatch.Id">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+    <div>
+        <h4>WristWatch</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.Name)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.Name)
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.ManufacturingDate)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.ManufacturingDate)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.StrapMaterial)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.StrapMaterial)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.HighWaterResistance)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.HighWaterResistance)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.PriceUSD)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.PriceUSD)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.WristWatch.Manufacturer)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.WristWatch.Manufacturer.Name)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-page="./Edit" asp-route-id="@Model.WristWatch.Id">Edit</a> |
+        <a asp-page="./Index">Back to List</a>
+    </div>
+</body>

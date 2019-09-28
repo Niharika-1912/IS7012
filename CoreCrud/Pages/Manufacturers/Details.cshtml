@@ -4,34 +4,36 @@
 @{
     ViewData["Title"] = "Details";
 }
+    <body background="https://s3.amazonaws.com/Syntaxxx/background-gold-bokeh.jpg">
+        <h1>Manufacturer Info</h1>
+        <p>Below is a list of details of the manufacturer</p>
 
-<h1>Manufacturer Info</h1>
-
-<div>
-    <h4>Manufacturer</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Manufacturer.Name)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Manufacturer.Name)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Manufacturer.CountryofOrigin)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Manufacturer.CountryofOrigin)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Manufacturer.CountryCode)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Manufacturer.CountryCode)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-page="./Edit" asp-route-id="@Model.Manufacturer.ID">Edit</a> |
-    <a asp-page="./Index">Back to List</a>
-</div>
+        <div>
+            <h4>Manufacturer</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Manufacturer.Name)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Manufacturer.Name)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Manufacturer.CountryofOrigin)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Manufacturer.CountryofOrigin)
+                </dd>
+                <dt class="col-sm-2">
+                    @Html.DisplayNameFor(model => model.Manufacturer.CountryCode)
+                </dt>
+                <dd class="col-sm-10">
+                    @Html.DisplayFor(model => model.Manufacturer.CountryCode)
+                </dd>
+            </dl>
+        </div>
+        <div>
+            <a asp-page="./Edit" asp-route-id="@Model.Manufacturer.ID">Edit</a> |
+            <a asp-page="./Index">Back to List</a>
+        </div>
+    </body>

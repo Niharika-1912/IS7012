@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using CoreCrud.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.EntityFrameworkCore;
 
 namespace CoreCrud.Pages
 {
@@ -18,7 +19,7 @@ namespace CoreCrud.Pages
         public ICollection<WristWatch> Watches { get; set; }
         public void OnGet(int? id)
         {
-            Watches = _context.WristWatch.OrderBy(x => x.PriceUSD).ToList();
+            Watches = _context.WristWatch.Include(i=>i.Manufacturer).OrderBy(x => x.PriceUSD).ToList();
         }
     }
 }

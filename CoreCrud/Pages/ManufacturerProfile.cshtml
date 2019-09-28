@@ -6,19 +6,15 @@
 
 
 <head>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
+    
 </head>
 
-<body style="background-color:antiquewhite">
+<body background="https://s3.amazonaws.com/Syntaxxx/background-gold-bokeh.jpg">
     <h1>ManufacturerProfile</h1>
     <h2 class="text-center text-success">@Model.Manufacturer.Name</h2>
     <div class="row">
 
-        <div class="col-md-6" >
+        <div class="col-md-6">
             <h3>Manufacturer Details</h3>
             <dl>
                 <dd>Name</dd>
@@ -31,15 +27,16 @@
             <h3>Collection</h3>
 
 
-            @foreach (var wristWatch in Model.Manufacturer.Watches)
-            {
-                <table style="width:100%">
-                    <tr>
-                        <th>Name</th>
-                        <th>Price</th>
-                        <th>Deep Dive Compatible</th>
-                        <th>Life time Warranty</th>
-                    </tr>
+
+            <table style="width:100%" class="table table-bordered table-striped">
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Deep Dive Compatible</th>
+                    <th>Life time Warranty</th>
+                </tr>
+                @foreach (var wristWatch in Model.Manufacturer.Watches)
+                {
                     <tr>
                         <td>@wristWatch.Name</td>
                         <td>@wristWatch.PriceUSD</td>
@@ -56,12 +53,12 @@
                         </td>
                     </tr>
 
+                }
 
 
+            </table>
 
-                </table>
 
-            }
 
         </div>
     </div>

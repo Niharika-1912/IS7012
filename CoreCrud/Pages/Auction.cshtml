@@ -9,11 +9,12 @@
 <p>Find some of the best collections from these high-end manufacturers</p>
 
 
-<body style="background-color:burlywood">
+<body background="https://s3.amazonaws.com/Syntaxxx/background-gold-bokeh.jpg">
+
     <table class="table table-bordered table-striped">
         <thead>
             <tr>
-                <th>Maufacturer ID</th>
+                <th>Maufacturer Name</th>
                 <th>Model name</th>
                 <th>Price (USD)</th>
                 <th>Strap</th>
@@ -26,7 +27,7 @@
             @foreach (var Name in Model.Watches)
             {
                 <tr>
-                    <td>@Name.ManufacturerID</td>
+                    <td>@Name.Manufacturer.Name</td>
                     <td>@Name.Name</td>
                     <td>@Name.PriceUSD</td>
                     <td>@Name.StrapMaterial</td>
@@ -46,4 +47,4 @@
             }
         </tbody>
     </table>
-    </body>
+</body>
