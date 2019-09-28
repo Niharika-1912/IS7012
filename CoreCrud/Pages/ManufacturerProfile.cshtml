@@ -12,59 +12,57 @@
         }
     </style>
 </head>
-<h1>ManufacturerProfile</h1>
-<h2 class="text-center text-success">@Model.Manufacturer.Name</h2>
-<div class="row">
 
-    <div class="col-md-6">
-        <h3>Manufacturer Details</h3>
-        <dl>
-            <dd>Name</dd>
-            <dt>@Model.Manufacturer.Name</dt>
+<body style="background-color:antiquewhite">
+    <h1>ManufacturerProfile</h1>
+    <h2 class="text-center text-success">@Model.Manufacturer.Name</h2>
+    <div class="row">
 
-        </dl>
+        <div class="col-md-6" >
+            <h3>Manufacturer Details</h3>
+            <dl>
+                <dd>Name</dd>
+                <dt>@Model.Manufacturer.Name</dt>
 
+            </dl>
+
+        </div>
+        <div class="col-md-6">
+            <h3>Collection</h3>
+
+
+            @foreach (var wristWatch in Model.Manufacturer.Watches)
+            {
+                <table style="width:100%">
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Deep Dive Compatible</th>
+                        <th>Life time Warranty</th>
+                    </tr>
+                    <tr>
+                        <td>@wristWatch.Name</td>
+                        <td>@wristWatch.PriceUSD</td>
+                        <td>@wristWatch.DeepDiveCompatible</td>
+                        <td>
+                            @if (wristWatch.PriceUSD < 10000)
+                            {
+                                <text>No</text>
+                            }
+                            else
+                            {
+                                <text>Yes</text>
+                            }
+                        </td>
+                    </tr>
+
+
+
+
+                </table>
+
+            }
+
+        </div>
     </div>
-    <div class="col-md-6">
-        <h3>Collection</h3>
-
-
-        @foreach (var wristWatch in Model.Manufacturer.Watches)
-        {
-            <table style="width:100%">
-                <tr>
-                    <th>Name</th>
-                    <th>Price</th>
-                    <th>Deep Dive Compatible</th>
-                    <th>Life time Warranty</th>
-                </tr>
-                <tr>
-                    <td>@wristWatch.Name</td>
-                    <td>@wristWatch.PriceUSD</td>
-                    <td>@wristWatch.DeepDiveCompatible</td>
-                    <td>
-                        @if (wristWatch.PriceUSD <10000)
-                        {
-                            <text>No</text>
-                        }
-                        else
-                        {
-                            <text>Yes</text>
-                        }
-                    </td>
-                </tr>
-
-
-            </table>
-
-
-
-
-
-
-
-        }
-
-    </div>
-</div>
-
+</body>
