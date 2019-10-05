@@ -15,7 +15,7 @@ namespace FinalProjectV2.Models
         [Display(Name = "Admin Name")]
         public string AdminName { get; set; }
 
-        [Required(ErrorMessage = "Please provide the Tournamanet Name Managed")]
+        [Required(ErrorMessage = "Please provide the Tournament Name Managed")]
         [Display(Name = "Managing Tournaments")]
         public string ManagingTournament { get; set; }
 
